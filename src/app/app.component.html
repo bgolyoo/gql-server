@@ -1,0 +1,11 @@
+<div *ngFor="let courseItem of courses" (click)="select(courseItem.id)">
+  {{ courseItem.title }}
+</div>
+
+<div *ngIf="course">
+  <h2>{{ course.title }}</h2>
+  <p>{{ course.description }}</p>
+  <a [href]="course.url">{{ course.url }}</a>
+  <p>Author: {{ course.author }}</p>
+  <p>Topic: {{ course.topic }}</p>
+</div>
